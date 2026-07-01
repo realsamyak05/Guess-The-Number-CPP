@@ -127,7 +127,16 @@ void runGuess(int guesses, int level)
         cout << "\nGuesses Left : " << guesses << "\n"
              << endl;
         cout << "Enter your guess (integer between 1 and 100) : ";
-        cin >> userGuess;
+
+        if (!(cin >> userGuess))
+        {
+            cout << "\nPlease enter a valid integer.\n";
+
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            continue;
+        }
         if (userGuess < 1 || userGuess > 100)
         {
             cout << "Invalid !!!";
@@ -201,6 +210,10 @@ int main()
     }
     cout << "\n------------------------------------\n";
     runGuess(guesses, op);
+
+    cout << "\nPress Enter to exit...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get();
 
     return 0;
 }
