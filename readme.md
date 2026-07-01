@@ -40,6 +40,25 @@ g++ main.cpp -o game
 game.exe
 ```
 
+## Screenshots
+
+### Main Menu
+
+![Main Menu](images/menu.png)
+
+### Rules
+
+![Rules](images/rules.png)
+
+### Gameplay
+
+![Gameplay](images/gameplay.png)
+
+### Winning Screen
+
+![Winning Screen](images/end.png)
+
+
 ## Author
 
 Samyak Chaturvedi || Sam
